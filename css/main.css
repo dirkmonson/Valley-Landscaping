@@ -1,4 +1,45 @@
 /*************************************************************
+fonts
+*************************************************************/
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('../fonts/bebas/BEBAS___-webfont.eot');
+    src: url('../fonts/bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebas/BEBAS___-webfont.woff') format('woff'),
+         url('../fonts/bebas/BEBAS___-webfont.ttf') format('truetype'),
+         url('../fonts/bebas/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothamthin';
+    src: url('../fonts/gotham_thin/gotham-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothambook';
+    src: url('../fonts/gotham_book/gotham_book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothambold';
+    src: url('../fonts/gotham_bold/gotham-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*************************************************************
 body
 *************************************************************/
 
@@ -8,18 +49,24 @@ html {
 body{
 	background-color: black;
 	position: relative;
+	font-family: 'bebasregular', Arial, sans-serif;
+}
+p {
+	font-family: 'gothamthin', Arial, sans-serif;
 }
 
 .left-pad-rem {
-	padding-left: 0px;
+	/*padding-left: 0px;*/
 }
 
 .right-pad-rem {
-	padding-right: 0px;
+	/*padding-right: 0px;*/
 }
 
-h2 {
+h1,h2,.button {
 	color:white;
+	font-family: 'bebasregular', Arial, sans-serif;
+	word-spacing: 5px;
 }
 
 a {
@@ -82,6 +129,8 @@ header ul li a {
 	height: 4em;
 	padding-top: 1.3em;
 	color: #a8a5a4;
+
+	font-size: 1.2em;
 }
 
 header ul li:first-child{
@@ -134,6 +183,9 @@ HERO
 	position: absolute;
 	top: 500px; /*!!!Why cant I use fucking percentages get to go inline*/
 	margin-left: 10%;
+	letter-spacing: 5px;
+	word-spacing: 10px;
+	font-family: 'bebasregular', Arial, sans-serif;
 }
 
 #headline h1 span {
@@ -150,6 +202,7 @@ HERO
 
 #hero #hero-text p {
 	color: white;
+	font-family: 'gothamthin', Arial, sans-serif;
 }
 
 /*************************************************************
@@ -192,14 +245,18 @@ INFO ROWS
 }
 
 .info-row h3 {
-	font-size: 2em;
+	font-family: 'bebasregular', Arial, sans-serif;
+	word-spacing: 5px;
+	font-size: 2.5em;
 }
 
 .info-row p{
 	margin-bottom: 0;
+	font-family: 'gothamthin', Arial, sans-serif;
 }
 
 .info-row p:nth-of-type(2){
+	font-family: 'gothambold', Arial, sans-serif;
 	text-align: right;
 	font-weight: bold;
 	text-decoration: underline;
@@ -248,7 +305,7 @@ SERVICE BLOCK
 #quote-and-contact {
 	position: absolute;
 	margin-top:1400px;
-	width: 100%
+	width: 100%;
 }
 
 #quote-and-contact .row {
@@ -327,6 +384,8 @@ footer {
 	margin-top: 1820px;
 	background-color: #00813e;
 	color: white;
+	font-family: Helvetica;
+	font-weight: lighter;
 
 }
 
@@ -338,11 +397,15 @@ footer ul {
 
 footer p, footer address, footer a{
 	font-size: .7em;
+	font-family: 'bebasregular', Arial, sans-serif;
+	word-spacing: 5px;
 }
 
 footer h5 {
 	color: white;
 	font-size: 1em;
+	font-family: 'bebasregular', Arial, sans-serif;
+	word-spacing: 5px;
 }
 
 /*************************************************************
