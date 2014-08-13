@@ -1,66 +1,23 @@
 /*************************************************************
-fonts
+BODY
 *************************************************************/
 
-@font-face {
-    font-family: 'bebasregular';
-    src: url('../fonts/bebas/BEBAS___-webfont.eot');
-    src: url('../fonts/bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bebas/BEBAS___-webfont.woff') format('woff'),
-         url('../fonts/bebas/BEBAS___-webfont.ttf') format('truetype'),
-         url('../fonts/bebas/BEBAS___-webfont.svg#bebasregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'gothamthin';
-    src: url('../fonts/gotham_thin/gotham-thin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'gothambook';
-    src: url('../fonts/gotham_book/gotham_book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'gothambold';
-    src: url('../fonts/gotham_bold/gotham-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
+body, html {
+	height: 100%;
 }
 
 
-/*************************************************************
-body
-*************************************************************/
-
-html {
-	width: 100%;
-}
-body{
-	background-color: black;
-	position: relative;
+body {
+	background: #000 url('../img/header/header.png') no-repeat;
+	background-size: 100% auto;
+	padding: 25px 0 0;
 	font-family: 'bebasregular', Arial, sans-serif;
 }
+
 p {
 	font-family: 'gothamthin', Arial, sans-serif;
-}
+	color: black;
 
-.left-pad-rem {
-	/*padding-left: 0px;*/
-}
-
-.right-pad-rem {
-	/*padding-right: 0px;*/
 }
 
 h1,h2,.button {
@@ -78,347 +35,331 @@ a[href^="tel"]{
 }
 
 /*************************************************************
-HEADER 
+HEADER
 *************************************************************/
-
-header {
-	position: absolute;
-	height: 163px;
-	background-image: url("../img/header/menu-background.png"), url("../img/header/header-image.png");
-	width: 100%;
-	background-repeat: repeat-x, no-repeat; 
-	background-size: 120% 35%, 100% 100%;
-	background-position: bottom, top;
-
-}
 
 /*************************************************************
-HEADER - RIGHT NAV
+HEADER - LOGO
 *************************************************************/
 
-.container {
+#logo {
+	text-align: center; /*Make bigger... position lower*/
+}
+
+#logo img{
 	position: relative;
-	height: 100%;
+	top:60px;
 }
 
 
-#menu-list{
-	
-	height: 4em;
-	margin: 0 0;
-	/*bottom: 0%;*/
+
+@media only screen and (max-width: 40em) {
+
+	#logo img{
+		position: static;
+	}
+
+} 
+
+
+/*************************************************************
+HEADER - NAV
+*************************************************************/
+
+nav {
+	width: 100%;
+
 }
 
-header .row {
-	position: relative;
-	height: 100%;
+nav ul {
+	list-style: none;
+	padding: 0 0;
+	margin-top: 125px;
+	margin-left: 0px;
+	margin-bottom: 0px;
 }
 
-#header-nav {
-	position: relative;
-	padding: 0px;
-	top: 60%;
-	z-index:20;
+nav li {
+	padding: 0 5px;
+	margin: 0;
+	display: inline;
+
+
 }
 
-header ul li {
- height: 5em;
-}
-
-header ul li a {
-	height: 4em;
-	padding-top: 1.3em;
+nav li a{
 	color: #a8a5a4;
-
 	font-size: 1.2em;
 }
 
-header ul li:first-child{
-	margin-left: 1.5em;
-
-}
-
-header ul li a:hover {
+nav li a:hover {
+	position: relative;
 	opacity: 1.0;
 	color: #fff799;
 	background-image: url("../img/header/white-arrow.gif"), url("../img/header/header-nav-highlight.png");
 	background-repeat: no-repeat;
-	background-position: 50% 25%;
+	background-position: center top; /*Advice on putting this on top... what the hell*/
 }
 
-
-/*************************************************************
-HEADER - LEFT
-*************************************************************/
-
-.logo {
-	position: relative;
-	left: 9%;
-	top: 35%;
-	z-index: 10;
+@media only screen and (max-width: 64em) { 
+	nav li a:hover {
+		opacity: 1.0;
+		color: #fff799;
+		background-image: none;
+	}	
 }
 
-.logo img {
+@media only screen and (max-width: 40em) {
+	nav ul {
+		margin-top: 25px;
+	}
 
-}
+	nav li a{
+		font-size: .9em;
+	}
+
+} 
+
 /*************************************************************
 HERO
 *************************************************************/
 
-#hero {
-	position: absolute;
-	margin-top: 163px;
-    height: 754px;
+
+#hero img {
 	width: 100%;
-	background-image: url("../img/hero/hero-1.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	z-index: -1;
 }
 
-
-#headline h1{
-	color: white;
-	position: absolute;
-	top: 500px; /*!!!Why cant I use fucking percentages get to go inline*/
-	margin-left: 10%;
-	letter-spacing: 5px;
-	word-spacing: 10px;
-	font-family: 'bebasregular', Arial, sans-serif;
-}
-
-#headline h1 span {
-	color: #f1ef93; 
-}
-
-#hero-text{
-	position: absolute;
-	bottom: 0%;
-	width: 60%;
-	margin-left:10%; /*Look at this shit!*/
-	background-color: rgba(0,0,0,0.4);
-}
-
-#hero #hero-text p {
-	color: white;
-	font-family: 'gothamthin', Arial, sans-serif;
-}
 
 /*************************************************************
-DIVIDER
+SERVICES AND PROJECTS
 *************************************************************/
-div .row .divider-container {
-	position: relative;
-}
-.divider{
-	position: absolute;
-	margin-top: 917px;
-	height: 10px;
-	width: 100%;
-	background-image: url("../img/green-divider.png");
-	background-repeat: no-repeat;	
-	background-position: center;
 
-}
-
-/*************************************************************
-INFO ROWS
-*************************************************************/
-#services-and-features{
-	position: absolute;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-top: 927px;
-}
-.info-row {
-/*	position: absolute;
-	margin-top: 900px;*/
-	color: black;
+.services, .projects {
 	background-color: white;
 	margin-top: 20px;
-
-}
-
-.image-container {
 	padding-left: 0px;
+
 }
 
-.info-row h3 {
+ .services h3, .projects h3 {
 	font-family: 'bebasregular', Arial, sans-serif;
 	word-spacing: 5px;
 	font-size: 2.5em;
 }
 
-.info-row p{
-	margin-bottom: 0;
+.services p, .projects p{
 	font-family: 'gothamthin', Arial, sans-serif;
 }
 
-.info-row p:nth-of-type(2){
+.services p:nth-of-type(2), .projects p:nth-of-type(2){
 	font-family: 'gothambold', Arial, sans-serif;
-	text-align: right;
 	font-weight: bold;
 	text-decoration: underline;
+	text-align: right;
 }
+
+.services img, .projects img{
+	margin-right: 5px;
+}
+
+@media only screen and (max-width: 64em) { 
+	.services, .projects {
+	 	text-align: center;
+	}
+} 
+
 
 
 /*************************************************************
-SERVICE
+SERVICES AND PROJECTS - SERVICES
 *************************************************************/
-
-#service h3 {
+.services h3 {
 	color: #076028;
-
 }
 
-#service-image {
-	padding: 0;
+.services {
+	height: 200px;
+	color: black;
+}
+
+.services img {
+	position: relative;
 	border-left: 15px solid #076028;
 	border-right: 15px solid #076028;
+	height: 100%;
 }
 
-#service a {
+.services a {
 	color: #076028;
 }
 
+@media only screen and (max-width: 64em) { 
+	.services {
+	 	height: 250px;
+	}
+} 
 /*************************************************************
-FEATURED
+SERVICES AND PROJECTS - PROJECTS
 *************************************************************/
-#featured h3{
+
+.projects h3{
 	color: #a44310;
 }
-#featured-image {
-	padding: 0;
+
+.projects p {
+	margin-bottom: 0px;
+}
+
+
+.projects {
+	height: 190px;	
+	margin-bottom: 20px;
+	color: black;
+}
+
+.projects img {
+	position: relative;
 	border-left: 15px solid #a44310;
 	border-right: 15px solid #a44310;
+	height: 100%;
 }
 
-#featured a {
+.projects a{
 	color: #a44310;
 }
 
+@media only screen and (max-width: 64em) { 
+	.projects {
+	 	height: 225px;
+	}
+} 
+
 /*************************************************************
-SERVICE BLOCK
+QUOTES AND QUOTE
 *************************************************************/
 
-#quote-and-contact {
-	position: absolute;
-	margin-top:1400px;
-	width: 100%;
-}
 
-#quote-and-contact .row {
-
-}
-
-#service-block {
+#serviceList {
 	background: -webkit-linear-gradient(right, #b1b17e, #c8c794, #b1b17e);
-	margin-top: 20px;
-	height: 200px;
 	color: white;
+	height: 200px;
 }
 
-#service-block ul {
+#serviceList ul{
 	list-style: none;
-	position: absolute;
-	bottom: 0px;
+	text-align: center;
+	margin-top: 150px;
+	margin-left: 0px;
 }
 
-#service-block ul li {
-	width: 100px;
-	float: left;
-	margin-right: 30px;
-	font-size: 1.7em;
+#serviceList ul li{
+	display: inline;
+	margin-right: 15px;
+	font-size: 1.5em;
 	text-align: center;
+	word-spacing: 5px;
 }
-/*************************************************************
-GET A QUOTE
-*************************************************************/
+
+@media only screen and (max-width: 64em) {
+	#serviceList ul {
+		margin-top: 10px;
+	}
+} 
 
 #quote {
 	background: -webkit-linear-gradient(right, #116d2a, #309533, #116d2a);
-	margin-top: 20px;
 	height: 200px;
+	padding: 0;
+	border-left: black 15px solid;
 	text-align: center;
 }
 
 #quote h2{
-	font-size: 3em;
+	font-size: 2em;
 }
 
 #quote .button{
 	background-color: #053b11;
-	font-size: 2em;
+	font-size: 1.5em;
 }
+
+
+
+@media only screen and (max-width: 64em) {
+	#quote {
+		border-left: none;
+		margin-top: 15px;
+	}
+} 
 
 /*************************************************************
-ASSOCIATIONS
+Associations
 *************************************************************/
 
-#associations {
-	position: relative;
-	height: 200px;
-	width: 100%;
-	background-image: url("../img/bottom-background.png");
-	background-position: bottom left;
-	background-size: cover; /*What the fuck*/
-	z-index: 20;
+#associations{
+	margin: 20px 0px;
+	padding-left: 0px;
 }
 
-
-#associations div {
-	position: absolute;
-	bottom: 20%;
-	width: 100%;
+#associations img{
+	margin-right: 20px;
+	margin-left: 0px;
 }
+
+#tree {
+	background: url('../img/footer/footer.jpg') no-repeat top;
+	/*background-size: cover;*/
+	min-height: 350px;
+}
+
 
 
 /*************************************************************
 FOOTER
 *************************************************************/
 
+
 footer {
-	position: absolute;
-	width: 100%;
-	margin-top: 1820px;
 	background-color: #00813e;
 	color: white;
-	font-family: Helvetica;
-	font-weight: lighter;
-
 }
 
-footer ul {
+
+.bottom {
+	height: 300px;
+	background-color: #00813e;
+	color: white;
+}
+
+.bottom ul {
 	list-style: none;
-	margin-left: 0;
-	font-size: .7em;
 }
 
-footer p, footer address, footer a{
-	font-size: .7em;
-	font-family: 'bebasregular', Arial, sans-serif;
-	word-spacing: 5px;
-}
 
-footer h5 {
+.bottom p, .bottom h5 {
 	color: white;
 	font-size: 1em;
 	font-family: 'bebasregular', Arial, sans-serif;
 	word-spacing: 5px;
 }
 
+@media only screen and (max-width: 64em) {
+	.bottom ul, .bottom h5, .bottom address, .bottom a{
+		margin-left:30%;
+	}
+}
+
 /*************************************************************
 FOOTER FORM
 *************************************************************/
-footer form input{
+form input{
 	float: left;
 }
 
-footer form input[type="text"]{
+form input[type="text"]{
 	width: 80%;
 }
-footer form input[type="submit"]{
+form input[type="submit"]{
 	width: 17%;
 	margin-left: 3%;
 	height: 37px;
@@ -429,11 +370,11 @@ footer form input[type="submit"]{
 }
 
 /*************************************************************
-FOOTER Charger
+COPYRIGHT DIV
 *************************************************************/
 
-#charge {
-	padding: 0 0;
+#copyright{
+	background-color: #00813e;
 }
 
 
@@ -442,7 +383,13 @@ FOOTER Charger
 
 
 
-.testone{
-	background-color: lightblue;
-	bottom: 50px;
-}
+
+
+
+
+
+
+
+
+
+
