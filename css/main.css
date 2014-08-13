@@ -34,6 +34,10 @@ a[href^="tel"]{
 	color: white;
 }
 
+.collapse-row{
+	height:1px;
+}
+
 /*************************************************************
 HEADER
 *************************************************************/
@@ -129,6 +133,45 @@ HERO
 	width: 100%;
 }
 
+#headline h1{
+	color: white;
+	position: relative;
+	top: -275px;
+	left: 190px;
+	letter-spacing: 5px;
+	word-spacing: 10px;
+	font-family: 'bebasregular', Arial, sans-serif;
+}
+
+#headline h1 span {
+	color: #f1ef93; 
+}
+
+#hero-text-large{
+	position: relative;
+	background-color: green;
+	top: -140px;
+	background-color: rgba(0,0,0,0.4);
+	height: 150px;
+	width: 60%;
+	margin: auto;
+}
+
+#hero-text-large p, #hero-text-other p{
+	color:white;
+}
+
+@media only screen and (max-width: 64em) { 
+	#headline h1{
+
+		position: relative;
+		top: -150px;
+		left: 0px;
+
+	}
+} 
+
+
 
 /*************************************************************
 SERVICES AND PROJECTS
@@ -196,6 +239,10 @@ SERVICES AND PROJECTS - SERVICES
 @media only screen and (max-width: 64em) { 
 	.services {
 	 	height: 250px;
+	}
+
+	.services img{
+		margin-left: 15px;
 	}
 } 
 /*************************************************************
