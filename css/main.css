@@ -4,13 +4,14 @@ BODY
 
 body, html {
 	height: 100%;
+	width: 100%;
 }
 
 
 body {
 	background: #000 url('../img/header/header.png') no-repeat;
 	background-size: 100% auto;
-	padding: 25px 0 0;
+	padding:25px 0 0;
 	font-family: 'bebasregular', Arial, sans-serif;
 }
 
@@ -53,6 +54,34 @@ a[href^="tel"]{
 .image-slider{
 	z-index: -1;
 }
+
+.left-shade, .right-shade{
+	position: fixed;
+	width: 8%;
+	height: 120%;
+	background-color: rgba(0,0,0,.3);
+	top: -25px;
+	z-index: 2000;
+}
+
+.left-shade{
+
+
+}
+
+.right-shade{
+
+	right: 0%;
+
+}
+
+@media only screen and (max-width: 40em) { 
+	.right-shade, .left-shade {
+		display: none;
+	}
+} 
+
+
 
 /*************************************************************
 HEADER
@@ -168,6 +197,11 @@ nav li a:hover {
 /*************************************************************
 HERO
 *************************************************************/
+
+#hero {
+	background: -webkit-linear-gradient(right, rgba(166,166,166,0.3), rgba(255,255,255,0.1), rgba(166,166,166,0.3));
+
+}
 
 
 #hero img {
