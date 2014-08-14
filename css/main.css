@@ -14,6 +14,18 @@ body {
 	font-family: 'bebasregular', Arial, sans-serif;
 }
 
+@media only screen and (max-width: 40em) { 
+	body {
+		background-size: 500%;
+	}
+} 
+
+@media only screen and (min-width: 40em) and (max-width: 64em) { 
+	body {
+		background-image: none;
+	}
+}
+
 p {
 	font-family: 'gothamthin', Arial, sans-serif;
 	color: black;
@@ -38,6 +50,10 @@ a[href^="tel"]{
 	height:1px;
 }
 
+.image-slider{
+	z-index: -1;
+}
+
 /*************************************************************
 HEADER
 *************************************************************/
@@ -57,7 +73,7 @@ HEADER - LOGO
 
 
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 65em) {
 
 	#logo img{
 		position: static;
@@ -78,7 +94,7 @@ nav {
 nav ul {
 	list-style: none;
 	padding: 0 0;
-	margin-top: 125px;
+	margin-top: 130px;
 	margin-left: 0px;
 	margin-bottom: 0px;
 }
@@ -94,15 +110,19 @@ nav li {
 nav li a{
 	color: #a8a5a4;
 	font-size: 1.2em;
+	padding-top: 50px;
 }
 
 nav li a:hover {
 	position: relative;
 	opacity: 1.0;
+
 	color: #fff799;
 	background-image: url("../img/header/white-arrow.gif"), url("../img/header/header-nav-highlight.png");
+	background-size: auto, cover;
 	background-repeat: no-repeat;
-	background-position: center top; /*Advice on putting this on top... what the hell*/
+	background-position: 50% 50%, top center; 
+
 }
 
 @media only screen and (max-width: 64em) { 
@@ -110,7 +130,28 @@ nav li a:hover {
 		opacity: 1.0;
 		color: #fff799;
 		background-image: none;
+	}
+	
+	.remove-padding-mobile {
+		padding: 0;
+		z-index: 50;
 	}	
+
+	#mobile-menu ul{
+		margin-top: 0px;
+		width: 200%;
+	}
+
+
+	#mobile-menu ul li{
+		margin-top: 0px;
+		margin: 0;
+		display: inline;
+	}
+
+	#mobile-menu ul li a{
+		background-image: none;
+	}
 }
 
 @media only screen and (max-width: 40em) {
@@ -168,6 +209,10 @@ HERO
 		top: -150px;
 		left: 0px;
 
+	}
+	.image-slider img{
+		width: 100%;
+		z-index: -1;
 	}
 } 
 
@@ -393,8 +438,21 @@ footer {
 @media only screen and (max-width: 64em) {
 	.bottom ul, .bottom h5, .bottom address, .bottom a{
 		margin-left:30%;
+		text-align: center;
+		margin-left: initial;
 	}
+	.bottom {
+		height:200px;
+	}
+
+	.bottom a[href^="tel"]{
+		margin-left: 35%;
+
+	}
+
+
 }
+
 
 /*************************************************************
 FOOTER FORM
