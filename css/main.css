@@ -9,7 +9,7 @@ body, html {
 
 
 body {
-	background: #000 url('../img/header/header.png') no-repeat;
+	background:  #000 url('../img/header/background-texture-copy.png') no-repeat;
 	background-size: 100% auto;
 	padding:25px 0 0;
 	font-family: 'bebasregular', Arial, sans-serif;
@@ -17,13 +17,13 @@ body {
 
 @media only screen and (max-width: 40em) { 
 	body {
-		background-size: 500%;
+		background-size: 400%;
 	}
 } 
 
 @media only screen and (min-width: 40em) and (max-width: 64em) { 
 	body {
-		background-image: none;
+		background-size: 100% 200px;
 	}
 }
 
@@ -75,7 +75,7 @@ a[href^="tel"]{
 
 }
 
-@media only screen and (max-width: 40em) { 
+@media only screen and (max-width: 75em) { 
 	.right-shade, .left-shade {
 		display: none;
 	}
@@ -98,6 +98,7 @@ HEADER - LOGO
 #logo img{
 	position: relative;
 	top:60px;
+	width: 100%
 }
 
 
@@ -199,7 +200,7 @@ HERO
 *************************************************************/
 
 #hero {
-	background: -webkit-linear-gradient(right, rgba(166,166,166,0.3), rgba(255,255,255,0.1), rgba(166,166,166,0.3));
+	background: -webkit-linear-gradient(right, rgba(166,166,166,0.2), rgba(255,255,255,0.0), rgba(166,166,166,0.2));
 
 }
 
@@ -212,7 +213,7 @@ HERO
 	color: white;
 	position: relative;
 	top: -275px;
-	left: 190px;
+	padding-left: 190px;
 	letter-spacing: 5px;
 	word-spacing: 10px;
 	font-family: 'bebasregular', Arial, sans-serif;
@@ -222,7 +223,7 @@ HERO
 	color: #f1ef93; 
 }
 
-#hero-text-large{
+.hero-text-large{
 	position: relative;
 	background-color: green;
 	top: -140px;
@@ -232,7 +233,7 @@ HERO
 	margin: auto;
 }
 
-#hero-text-large p, #hero-text-other p{
+.hero-text-large p, #hero-text-other p{
 	color:white;
 }
 
@@ -514,8 +515,14 @@ COPYRIGHT DIV
 
 #copyright{
 	background-color: #00813e;
+	padding-left: 10%;
 }
 
+@media only screen and (max-width: 64em) {
+	#copyright{
+		padding-left: 0%;
+	}
+}
 
 
 
