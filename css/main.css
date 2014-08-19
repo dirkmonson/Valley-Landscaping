@@ -103,10 +103,20 @@ HEADER - LOGO
 
 
 
-@media only screen and (max-width: 65em) {
+@media only screen and (max-width: 40em) {
 
 	#logo img{
 		position: static;
+		width:60%;
+	}
+
+} 
+
+@media only screen and (min-width: 40em) and (max-width: 65em) {
+
+	#logo img{
+		position: static;
+		width:40%;
 	}
 
 } 
@@ -155,7 +165,23 @@ nav li a:hover {
 
 }
 
+#all-top-nav {
+	height: 177px;
+}
+
+#large-nav {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+
 @media only screen and (max-width: 64em) { 
+
+	#all-top-nav {
+		height: auto;
+	}
 	nav li a:hover {
 		opacity: 1.0;
 		color: #fff799;
@@ -322,7 +348,7 @@ SERVICES AND PROJECTS - SERVICES
 	}
 
 	.services img{
-		margin-left: 15px;
+		/*margin-left: 15px;*/
 	}
 } 
 /*************************************************************
@@ -355,10 +381,37 @@ SERVICES AND PROJECTS - PROJECTS
 	color: #a44310;
 }
 
-@media only screen and (max-width: 64em) { 
-	.projects {
-	 	height: 225px;
+@media only screen and (min-width: 40em) and (max-width: 64em) { 
+
+	.image-box {
+		height:150px;
+		overflow: hidden;
 	}
+	#proj-serv-images{
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	img.projects{
+		border-left: 15px solid #a44310;
+		border-right: 15px solid #a44310;
+		margin: 0 50px 0 0;
+
+
+
+	}
+	
+	img.services {
+		border-left: 15px solid #076028;
+		border-right: 15px solid #076028;
+		margin: 0; 
+/*
+		height: 100%;*/
+
+	}
+
 } 
 
 /*************************************************************
