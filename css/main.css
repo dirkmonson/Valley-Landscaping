@@ -208,6 +208,9 @@ nav li a:hover {
 	#mobile-menu ul li a{
 		background-image: none;
 	}
+
+	div.inner-wrap {
+	}
 }
 
 @media only screen and (max-width: 40em) {
@@ -277,6 +280,14 @@ HERO
 	}
 } 
 
+@media only screen and (max-width: 44em) { 
+	#headline h1{
+		font-size: 1.75em;
+		padding-left: 0px;
+		bottom: 0px;
+
+	}
+} 
 
 
 /*************************************************************
@@ -298,6 +309,7 @@ SERVICES AND PROJECTS
 
 .services p, .projects p{
 	font-family: 'gothamthin', Arial, sans-serif;
+	font-weight: 500;
 }
 
 .services p:nth-of-type(2), .projects p:nth-of-type(2){
