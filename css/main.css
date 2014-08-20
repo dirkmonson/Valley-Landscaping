@@ -195,14 +195,21 @@ nav li a:hover {
 
 	#mobile-menu ul{
 		margin-top: 0px;
+		padding-top: 10px;
 		width: 200%;
 	}
 
-
 	#mobile-menu ul li{
 		margin-top: 0px;
-		margin: 0;
 		display: inline;
+	}
+
+	.move-right .inner-wrap {
+		transform: translate3d(90%, 0, 0);
+	}
+
+	.left-off-canvas-menu {
+		width: 90%;
 	}
 
 	#mobile-menu ul li a{
@@ -215,7 +222,7 @@ nav li a:hover {
 
 @media only screen and (max-width: 40em) {
 	nav ul {
-		margin-top: 25px;
+		/*margin-top: 50px;*/
 	}
 
 	nav li a{
